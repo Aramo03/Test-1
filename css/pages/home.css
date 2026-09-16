@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+:root{
+    --menu-height:70px;
+}
+header{
+    width: 100%;
+    height: var(--menu-height);
+    background-color: rgb(42, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo > h1{
+    color: white;
+    font-family: fantasy;
+    cursor: pointer;
+}
+
+.navigation{
+    display: flex;
+    gap: 20px;
+}
+
+.li-nav{
+    list-style: none;
+}
+
+.nav{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(219, 213, 213, 0.479);
+    padding-bottom: 3px;
+    transition: all 0.4s;
+}
+
+.nav:hover{
+    color: white;
+    border-bottom: 1px solid rgb(0, 60, 255);
+}
+
+.buttons > button{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: fantasy;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.log-in{
+    background-color: rgb(105, 103, 103);
+    transition: all 0.4s;
+}
+
+.log-in:hover{
+    background-color: rgba(105, 103, 103, 0.651);
+}
+
+.sing-us{
+    background-color: rgb(0, 60, 255);
+    transition: all 0.4s;
+}
+
+.sing-us:hover{
+    background-color: rgba(0, 60, 255, 0.726);
+}
+
+/* header */
+
+/* main */
+main{
+    margin-top: var(--menu-height);
+}
+.baner-hero{
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://blog-cdn.aviata.kz/blog/posts/optimized/0_9a9d74442ddbed6b2e4b3969d9d5abb9dac3ccf5.png.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-inline: 50px;
+    position: relative;
+}
+
+.baner-hero > h1{
+    color: white;
+    font-family: fantasy;
+    font-size: 85px;
+    overflow: hidden;
+    animation: h1-ani 1s;
+}
+
+@keyframes h1-ani{
+    0%{
+        transform: translateX(-500px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.baner-hero > p{
+    color: rgb(218, 212, 212);
+    font-size: 25px;
+    animation: p-ani 1s;
+    animation-delay: 0.6s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes p-ani{
+    0%{
+        transform: translateX(-500px);
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.baner-hero > button{
+    width: 190px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(0, 60, 255);
+    font-family: fantasy;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.4s;
+    animation: but-ani 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes but-ani{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.baner-hero > button:hover{
+    background-color: rgba(0, 60, 255, 0.801);
+    border: 1px solid black;
+}
+
+.camera{
+    width: 400px;
+    height: 300px;
+    background-image: url("https://png.pngtree.com/png-vector/20240905/ourmid/pngtree-black-dslr-camera-with-large-lens-clipart-illustration-stock-photo-png-image_13758787.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.bottom-sect{
+    width: 100%;
+    height: 450px;
+    background-color: rgb(42, 40, 40);
+}
+
+.day{
+    width: 100%;
+    height: 100px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: flex-end;
+    padding-inline: 50px;
+}
+
+.day > h1{
+    color: white;
+    font-size: 60px;
+    font-family: fantasy;
+    padding-inline: 200px;
+}
+
+.all-card{
+    width: 100%;
+    height: 300px;
+    /* background-color: blue; */
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 40px;
+    padding-inline: 250px;
+}
+
+.card{
+    background-color: red;
+    width: 270px;
+    border-radius: 10px;
+}
+
+.movie{
+    color: white;
+    padding-inline: 10px;
+    padding-block: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: rgba(250, 42, 42, 0.39);
+    border: 3px solid rgba(250, 42, 42, 0.829);
+    position: relative;
+}
+
+.poster{
+    width: 170px;
+    height: 190px;
+    background-image: url("https://www.tallengestore.com/cdn/shop/products/Joker_-_Joaquin_Phoenix_-_Hollywood_Action_Movie_Poster_4d1b0644-dd78-42f8-996a-5d0c5bdc21b5.jpg?v=1573629455");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.poster:hover{
+    width: 245px;
+}
+
+.movie > h3{
+    font-size: 20px;
+}
+
+.movie > h2{
+    font-size: 40px;
+}
+
+.movie > p{
+    font-size: 17px;
+    color: rgb(218, 209, 209);
+}
+
+.red{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(250, 42, 42);
+    position: absolute;
+    -webkit-clip-path: polygon(100% 35%, 36% 100%, 100% 100%);
+    clip-path: polygon(100% 35%, 36% 100%, 100% 100%);
+    bottom: 0;
+    right: 0;
+}
+
+.football{
+    background-color: rgba(0, 81, 255, 0.418);
+    border: 3px solid rgba(0, 81, 255, 0.863);
+    position: relative;
+}
+
+.match{
+    width: 100%;
+    height: 170px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.arsenal{
+    width: 100px;
+    height: 115px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/hif/8/82/Arsenal_FC.png?utm_source=hif.wikipedia.org&utm_campaign=index&utm_content=original");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.vs{
+    color: white;
+    font-family: fantasy;
+}
+
+.chelsea{
+    width: 100px;
+    height: 100px;
+    background-image: url("https://assets.football-logos.cc/logos/england/700x700/chelsea.a22ea19b.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.football-text{
+    width: 100%;
+    height: 130px;
+    /* background-color: blue; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    padding-bottom: 30px;
+    padding-inline: 10px;
+}
+
+.football-text > h1{
+    font-size: 40px;
+}
+
+.football-text > p{
+    color: rgb(218, 209, 209);
+}
+
+.football-text > button{
+    width: 80px;
+    height: 30px;
+    border: 2px solid black;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.football-text > button:hover{
+    background-color: rgba(255, 0, 0, 0.726);
+}
+
+.blue{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 81, 255);
+    -webkit-clip-path: polygon(100% 35%, 36% 100%, 100% 100%);
+    clip-path: polygon(100% 35%, 36% 100%, 100% 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.itali{
+    background-color: rgba(57, 243, 40, 0.267);
+    border: 3px solid rgb(57, 243, 40);
+    position: relative;
+}
+
+.none-italy{
+    width: 100%;
+    height: 200px;
+    /* background-color: blue; */
+    padding: 10px;
+}
+
+.italy-card{
+    width: 100%;
+    height: 180px;
+    background-image: url("https://mandstravelmoney.com/media/0v0m3qul/adobestock_119146497.jpeg?width=1100&height=720&v=1db4b11940def30");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.italy-text{
+    color: white;
+    padding-inline: 10px;
+    position: relative;
+}
+
+.italy-text > h1{
+    font-size: 35px;
+}
+
+.italy-text > p{
+    color: rgb(218, 209, 209);
+}
+
+.green{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(57, 243, 40);
+    -webkit-clip-path: polygon(100% 35%, 36% 100%, 100% 100%);
+    clip-path: polygon(100% 35%, 36% 100%, 100% 100%);
+    position: absolute;
+    right: 0;
+}
+
+/* main */
